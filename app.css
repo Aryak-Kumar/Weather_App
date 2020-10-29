@@ -1,0 +1,124 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	background: linear-gradient(rgb(47,150,163),rgb(48,62,143));
+	font-family: sans-serif;
+	color: white;
+}
+.myHeader{
+	height: auto;
+	width: 95%;
+	justify-content: center;
+	background-color: rgb(47,160,163);
+	border-style: outset;
+	border-color: blue;
+	border-radius: 5px;
+	border-width: 1px;
+	color: black;
+}
+
+.weather-icon{
+	float: left;
+}
+.current-weather{
+	display: flex;
+}
+.reload{
+	float: right;
+	cursor: pointer;
+}
+.thermometer{
+	height: 70px;
+}
+.humidity{
+	height: 70px;
+}
+.rainfall{
+	height: 70px;
+}
+.uvlevel{
+	height: 70px;
+}
+
+
+
+
+.dropbtn {
+  background-color: #ff1a1a;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #b30000;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: relative;
+  background-color: #ff1a1a;
+  min-width: 160px;
+  border-radius: 20px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+
+
+
+
+
+
+.location,
+.temperature{
+	height: 30vh;
+	width: 50%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.temperature{
+	flex-direction: column;
+}
+.degree-section{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.degree-section span{
+	margin: 10px;
+	font-size: 30px;
+}
+.degree-section h2{
+	font-size: 40px;
+}

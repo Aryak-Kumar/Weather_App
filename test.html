@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Weather App</title>
+  <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+<body>
+	<div class="myHeader">
+		<img src="images/reload.png" class="reload">
+		<h1>Weather in Hong Kong</h1>
+		<div class="current-weather">
+		<img src="https://www.hko.gov.hk/images/HKOWxIconOutline/pic63.png" class="weather-icon">
+		<img src="images/thermometer.png" class="thermometer">
+		<p class="temperature-degree"></p>
+		<img src="images/drop.png" class="humidity">
+		<p class="temperature-degree"></p>
+		<img src="images/rain.png" class="rainfall">
+		<p class="temperature-degree"></p>
+		<img src="images/UVindex.png" class="uvlevel">
+		<p class="temperature-degree"></p>
+		</div>
+
+	<div class="dropdown">
+  <button onclick="drop()" class="dropbtn">Warning<img src="images/arrow.png"></button>
+  <div id="myDropdown" class="dropdown-content">
+    <p class="warning-msg">Warning</p>
+  </div>
+</div>	
+
+		
+	</div>
+
+  <script src="app.js"></script>
+  <script type="text/javascript">
+  	function drop() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</body>
+</html>

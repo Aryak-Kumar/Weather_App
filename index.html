@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="app.css">
+  <script src="app.js"></script>
+  <title>HKO Weather Info</title>
+</head>
+<body>
+<script>
+  function myFunction() {
+  var x = document.createElement("HEADER");
+  x.setAttribute("id", "myHeader");
+  document.body.appendChild(x);
+  var y = document.createElement("H1"); 
+  var t = document.createTextNode("Weather in Hong Kong");
+  y.appendChild(t);
+  x.appendChild(y);
+}
+window.onload = myFunction();
+</script>
+</body>
+</html>
