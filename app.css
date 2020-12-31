@@ -4,52 +4,62 @@
 	box-sizing: border-box;
 }
 body{
-	height: 100vh;
+	background-repeat: no-repeat;
 	display: flex;
-	justify-content: center;
+	padding: 10px;
 	flex-direction: column;
-	align-items: center;
-	background: linear-gradient(rgb(47,150,163),rgb(48,62,143));
+	background: #E6E6E6;
+	justify-content: center;
 	font-family: sans-serif;
-	color: white;
+	color: black;
 }
+main{
+	padding: 10px;
+}
+
 .myHeader{
 	height: auto;
+	padding: 5px;
+	color: white;
 	width: 95%;
-	justify-content: center;
-	background-color: rgb(47,160,163);
+	background-color: #81BEF7;
 	border-style: outset;
 	border-color: blue;
 	border-radius: 5px;
 	border-width: 1px;
-	color: black;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-top: 20px;
+  margin-bottom: 20px
 }
-
 .weather-icon{
 	float: left;
 }
 .current-weather{
 	display: flex;
+	justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+
 }
 .reload{
 	float: right;
 	cursor: pointer;
+	height: 50px;
 }
-.thermometer{
-	height: 70px;
+.reload:hover{
+	transform: scale(1.2);
 }
-.humidity{
+.icon{
 	height: 70px;
-}
-.rainfall{
-	height: 70px;
-}
-.uvlevel{
-	height: 70px;
+
 }
 
+.lastupdate-desp{
+	float: right;
 
-
+}
 
 .dropbtn {
   background-color: #ff1a1a;
@@ -57,12 +67,9 @@ body{
   padding: 16px;
   font-size: 16px;
   border: none;
+  box-shadow: 1px 1px 3px 0px red;
   cursor: pointer;
-  border-radius: 20px;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #b30000;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .dropdown {
@@ -72,32 +79,18 @@ body{
 
 .dropdown-content {
   display: none;
-  position: relative;
-  background-color: #ff1a1a;
-  min-width: 160px;
-  border-radius: 20px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  position: absolute;
+  min-width: 160px;
+  border-radius: 0px 5px 5px 5px;
+  background-color: salmon;
+  padding: 12px 16px;
+  
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.dropdown:hover .dropdown-content {
   display: block;
 }
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
-
-
-
-
-
-
 
 .location,
 .temperature{
@@ -110,15 +103,103 @@ body{
 .temperature{
 	flex-direction: column;
 }
-.degree-section{
-	display: flex;
+.fore_card {
+text-align: center;
+justify-content: center;
+  background-color: #1B72A4;
+  margin: 5px;
+  box-shadow: 1px 1px 2px 0px #666699;
+  border-radius: 20px;
+}
+
+.temp_div {
+  display: flex;
+  padding: 1vh 0;
+  flex-wrap: wrap;
+  margin-right:50px;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left:50px;
+  border-radius: 20px;
+}
+.tablink{
+	padding: 20px;
+  background-color: #66ccff;
+  width: 25%;
+  border-radius: 20px 20px 0px 0px;
+  align-items: center;
+  border:none;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  padding: 15px;
+  outline: none;
+  
+  
+  
+}
+.active{
+	padding: 20px;
+  background-color: #ada3e0;
+  width: 25%;
+  border-radius: 20px 20px 0px 0px;
+  border: none;
+  cursor: pointer;
+  color: blue;
+  font-size: 15px;
+  padding: 15px;
+  outline: none;
+  align-items: center;
+
+}
+.buttons{
 	align-items: center;
-	cursor: pointer;
+	text-align: center;
+	font-size: 1.2em;
+	justify-content: center;
 }
-.degree-section span{
-	margin: 10px;
-	font-size: 30px;
+.tablink:hover{
+	transform: scale(1.05);
+  background-color: #57abff;
+  color:blue;
 }
-.degree-section h2{
-	font-size: 40px;
+.temp_city {
+  background-color: #1B72A4;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px 0px #666699;
+  width: 140px;
+  box-sizing: border-box;
+  color: white;
+  margin: 4px;
+  height: 140px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
+
+.close {
+	right: 6px;
+  position: absolute;
+  top: 6px;
+  height: 20px;
+}
+
+.close:hover {
+  cursor: pointer;
+	transform: scale(1.1);
+}
+
+.hide{
+	display: none;
+}
+.fordiv {
+	justify-content: center;
+	text-align: center;
+  display: flex;
+  padding: 1vh 0;
+  flex-wrap: wrap; 
+  border-radius: 20px;
+}
+
