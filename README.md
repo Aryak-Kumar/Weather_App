@@ -1,0 +1,2 @@
+# Weather_App
+I have designed and developed a Web app that displays the current weather condition of Hong Kong together with (1) temperature data of various districts in Hong Kong and (2) 9-day weather forecast of Hong Kong. This program retrieves weather data from the Hong Kong Observatory Open Data via its APIs. The Web app is nicely rendered on mobile platforms and desktop computers and uses only javascript objects to render the page. 
